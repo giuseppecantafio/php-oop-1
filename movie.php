@@ -26,8 +26,8 @@ class Movie {
     }
 
     public function setParentalControl(){
-        if ($this->genere == 'horror'){
-            return $this->parentalControl == 'Attivo';
+        if ($this->genere = 'horror'){
+            return $this->parentalControl = 'Attivo';
         } else {
             return $this->parentalControl;
         }
