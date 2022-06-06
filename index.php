@@ -25,16 +25,14 @@ $myDB = [
     <title>Movie db</title>
 </head>
 <body>
-    <?php foreach ($myDB as $myMovie) {
+    <?php foreach($myDB as $myMovie) {
         $film = new Movie($myMovie['titolo'], $myMovie['genere'], $myMovie['durata']);
+        $film->setParentalControl();
     ?>
     <h1>Titolo: <?php echo $film->getTitolo(); ?></h1>
     <h2>Genere: <?php echo $film->getGenere(); ?></h2>
     <h2>Durata: <?php echo $film->getDurata(); ?></h2>
-    <h4>Parental Control: <?php 
-    $film->setParentalControl();
-    echo $film->getParentalControl(); 
-    ?></h4>
+    <h4>Parental Control: <?php echo $film->getParentalControl(); ?></h4>
     <?php } ?>
 </body>
 </html>
