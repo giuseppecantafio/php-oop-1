@@ -5,7 +5,7 @@ class Movie {
     private $titolo;
     private $genere;
     private $durata;
-    private $parentalControl = 'Non attivo';
+    private $parentalControl = false;
     
     function __construct($_titolo, $_genere, $_durata){
         $this->titolo = $_titolo;
@@ -26,11 +26,7 @@ class Movie {
     }
 
     public function setParentalControl(){
-        if ($this->genere = 'horror'){
-            return $this->parentalControl = 'Attivo';
-        } else {
-            return $this->parentalControl;
-        }
+        $this->genere == 'horror' ? $this->parentalControl = true : $this->parentalControl;
     }
     
     public function getParentalControl(){

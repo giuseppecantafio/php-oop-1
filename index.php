@@ -30,10 +30,11 @@ $myDB = [
     ?>
     <h1>Titolo: <?php echo $film->getTitolo(); ?></h1>
     <h2>Genere: <?php echo $film->getGenere(); ?></h2>
-    <h2>Durata<?php echo $film->getDurata(); ?></h2>
-    <h4>Parental Control: <?php echo $film->getParentalControl(); ?></h4>
-    <?php
-        var_dump($film);
-     } ?>
+    <h2>Durata: <?php echo $film->getDurata(); ?></h2>
+    <h4>Parental Control: <?php 
+    $film->setParentalControl();
+    echo $film->getParentalControl(); 
+    ?></h4>
+    <?php } ?>
 </body>
 </html>
